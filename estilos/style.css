@@ -12,14 +12,14 @@ verde piscina e verde piscina mais escuro*/
 }
 
 body,html{
-    background-color: aquamarine;
+    background-color: rgb(41, 111, 118);
     /*
     % / tamanho relativo ao elemento pai
     vw /largura da janela inteira (viewport width)
     vh / altura da janela (viewport height)
     */
     height: 100vh; 
-    width: 100vh; 
+    width: 100vw; 
 }
 
 main{
@@ -35,14 +35,24 @@ section#login{
     transform: translate(-50%, -50%); /* deixa no meio da tela independente do tamanho da dela*/
     overflow: hidden; /* tudo que estive fora da borda ficara redondo ,deixa as bordas arredondadas*/
 
-    background-color: white;
+    background-color: rgba(13, 1, 1, 0.471);
     width: 250px;
     height: 500px;
     border-radius: 20px;
+    box-shadow: 0px 0px 10px ;
+
+    transition: width 0.5s, height 0.5s; /* trasição muito legal*/
+    transition-timing-function: ease; /* transição suave*/
 }
 
 section#login > div#imagem{
-    background:aquamarine url(..//imagens/pexels-mithulvarshan-3023211.jpg) no-repeat;
+    background:rgb(41, 111, 118) url(..//imagens/pexels-mithulvarshan-3023211.jpg) no-repeat;
     background-size: cover;
-    height: 200px;
+    background-position:  center;
+    
+}
+
+section#login > div#formulario{
+    display: block;
+    padding: 10px;
 }

@@ -1,0 +1,57 @@
+@charset "UTF-8";
+
+/* typical device Breakpoints onde o layout muda para se adaptar ao tamanho da tela
+
+Pequenas telas: até 600px
+Celular: de 0px até 480px
+Tablet: de 481px até 768px
+Desktop: de 769px até 1279px
+Grandes telas: acima de 1280px...
+
+*/
+
+@media screen and (min-width:481px) and (max-width:768px){ /* tablet*/
+     body{
+        background-image: linear-gradient(to top, #49a09d, #5f2c82);
+    }
+    
+    section#login{
+    width:80vw;
+    }
+
+section#login > div#imagem{
+    float: left;
+    width: 38%;
+    height: 70%;
+    position: relative;
+}
+
+section#login > div#formulario{
+    float: right;
+    width: 70%;
+}
+
+}
+
+@media screen and (min-width:769px) {  /* Grandes telas*/
+    body{
+        background-image: linear-gradient(to top, #49a09d, #5f2c82);
+    }
+    
+    section#login{
+    width: 900px;
+    }
+
+section#login > div#imagem{
+    float: left;
+    width: 50%;
+    height: 100%;
+}
+
+section#login > div#formulario{
+    float: right;
+    width: 50%;
+}
+
+}
+    
