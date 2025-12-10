@@ -41,18 +41,29 @@ section#login{
     border-radius: 20px;
     box-shadow: 0px 0px 10px ;
 
-    transition: width 0.5s, height 0.5s; /* trasição muito legal*/
+    transition: width 0.2s, height 0.2s; /* trasição muito legal*/
     transition-timing-function: ease; /* transição suave*/
 }
 
 section#login > div#imagem{
+    display: block;
     background:rgb(41, 111, 118) url(..//imagens/pexels-mithulvarshan-3023211.jpg) no-repeat;
     background-size: cover;
     background-position:  center;
+    height: 200px;
     
 }
 
 section#login > div#formulario{
     display: block;
     padding: 10px;
+}
+
+div#formulario > h1{
+    text-align: center; 
+    margin-bottom: 10px;
+}
+
+div#formulario > p {
+    font-size: 0.8em ;
 }
