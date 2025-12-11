@@ -21,12 +21,15 @@ body{
     
     section#login{
     width:80vw;
+    height: 350px;
+    display: flex;
     }
 
 section#login > div#imagem{
-    float: left;
-    width: 35%;
+    display: block;
+    width: 40%;
    height: 100%;
+   order: 1; /* Faz a imagem aparecer depois (e esquerda ,2 direita) igual o rigth e left */
     
 }
 
@@ -37,16 +40,19 @@ section#login > div#formulario{
 
 }
 
-@media screen and (min-width:992px) {  /* Grandes telas*/
+@media screen and (min-width:992px) {  /* Grandes telas / descktop*/
     body{
         background-image: linear-gradient(to top, #49a09d, #5f2c82);
     }
     
     section#login{
     width: 950px;
+    height: 450px;
+    display: flex;
     }
 
 section#login > div#imagem{
+    display: block;
     float: right;
     width: 50%;
     height: 100%;
@@ -62,7 +68,8 @@ div#formulario > h1{
 }
 
 div#formulario > p {
-    font-size: 1.2em ;
+    font-size: 1em ;
+    margin: 20px 0px;
 }
 
 }

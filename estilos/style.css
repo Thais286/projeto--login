@@ -32,22 +32,24 @@ section#login{
     position: absolute;
     top:50%;
     left: 50%;
-    transform: translate(-50%, -50%); /* deixa no meio da tela independente do tamanho da dela*/
     overflow: hidden; /* tudo que estive fora da borda ficara redondo ,deixa as bordas arredondadas*/
 
     background-color: rgba(13, 1, 1, 0.471);
     width: 250px;
-    height: 515px;
+
     border-radius: 20px;
     box-shadow: 0px 0px 10px ;
 
+
+    transform: translate(-50%, -50%); /* deixa no meio da tela independente do tamanho da dela*/
     transition: width 0.2s, height 0.2s; /* trasição muito legal*/
     transition-timing-function: ease; /* transição suave*/
+    
 }
 
 section#login > div#imagem{
     display: block;
-    background:rgb(41, 111, 118) url(..//imagens/pexels-mithulvarshan-3023211.jpg) no-repeat;
+    background:rgb(41, 111, 118) url(../imagens/pexels-mithulvarshan-3023211.jpg) no-repeat;
     background-size: cover;
     background-position:  center;
     height: 200px;
@@ -59,7 +61,7 @@ section#login > div#formulario{
     padding: 10px;
 }
 
-div#formulario > h1{
+div#formulario > h1 {
     text-align: center; 
     margin-bottom: 10px;
 }
@@ -70,10 +72,12 @@ div#formulario > p {
 
 form > div.campo{
     background-color: #481b66 ;
-    display: block;
+    border: 2px solid #481b66;
+    display: flex;
+    align-items: center;
     width: 100%;
     height: 40px;
-    border-radius: 5px;
+    border-radius: 8px;
     margin: 5px 0px;
 
 }
@@ -84,7 +88,30 @@ div.campo > label {
 
 div.campo > span {
     color: white;
+    font-size: 20px;
+    width: 40px;
+    padding: 8px;
 }
+
+div.campo > input{ /* caixa de dentro onde fica os comandos para o usuario*/
+    background-color: aquamarine;
+    font-size: 1em;
+    width: calc(100% - 40px);/* para a caixa menor emcaioxar dentro da maior  ou usa flex-grow: 1; /* Faz o input ocupar todo o espaço restante*/
+    height: 100%;
+    border: 0px;
+    border-radius: 8px;
+    padding: 4px;
+    transform: none; /* tira o efeito de subir ou vc pode usar
+     translateY(-34px); para a caixa menor ficar cexatamente em cima da outra caixa que antes era a maior ( toda as transformaç~es são sempre colocadas na ultima linha igual essa agora*/
+}
+
+div.campo > input:focus-within{
+    background-color: white; /* dar foco*/
+    border: none;
+
+}
+      
+
 
 form > input[type=submit]{
     display: block;
@@ -98,7 +125,7 @@ form > input[type=submit]{
     cursor: pointer;
 }
 
-form > input [type=submit]:hover{
+form > input[type=submit]:hover{
     background-color: rgb(32, 88, 93);
 }
 
@@ -108,6 +135,7 @@ form > a.botao{
     font-size: 1em;
     width: 100%;
     height: 40px;
+    margin-top: 10px ;
     padding-top: 5px;
     background-color: white;
     color: rgb(7, 69, 69);
@@ -117,9 +145,12 @@ form > a.botao{
 }
 form > a.botao:hover{
     background-color: rgb(19, 77, 82) ;
+    color: white;
 }
 
-form > a.botao > i {
-    font-size: 0.8em;
+form > a.botao > span {
+    font-size: 1em;
+    vertical-align: middle;
+    margin-left: 5px;
 
 }
